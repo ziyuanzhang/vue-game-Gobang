@@ -36,6 +36,13 @@ export const store = new Vuex.Store({
         data[position.h]
       }) */
       state.ChessData[position.h][position.v].chessColor = state.pieceColoring;
+      if(state.pieceColoring=="black"){
+        console.log("state.pieceColoring:",state.pieceColoring)
+          state.pieceColoring="white"
+      }else{
+        console.log("state.pieceColoring:",state.pieceColoring)
+        state.pieceColoring="black"
+      }
     }
   }
 })
