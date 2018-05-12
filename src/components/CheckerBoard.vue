@@ -6,12 +6,13 @@
         <Chesscont v-for="(item,indexs) in ChessData" :key="indexs" :pieceData="{'pieceColor':item.chessColor,'h':index,'v':indexs}"></Chesscont>
      </div>
   </div>
+  <div>h--y</div>
   <div class="btn-container">
     <div class="player-con">
-      <span class="enter player" @click="">黑色下棋</span>
+      <span class=" player" :class="[isActivatClass ? 'enter' : 'leave']" @click="">黑色下棋</span>
     </div>
     <div class="player-con">
-      <span class="leave player" @click="">白色下棋</span>
+      <span class=" player" :class="[isActivatClass ? 'leave' : 'enter']" @click="">白色下棋</span>
     </div>
       
   </div>
@@ -20,6 +21,7 @@
 </template>
 
 <script>
+import Bus from './Bus.js'
 import Chesscont from './Chesscont'
 export default {
   name: "HelloWorld",
@@ -29,7 +31,8 @@ export default {
   data() {
     return {
       msg: "五子棋",
-      ChesscontArr: ["aa", "bb"]
+      ChesscontArr: ["aa", "bb"],
+      isActivatClass:true
     };
   },
   computed:{
@@ -38,6 +41,11 @@ export default {
       return this.$store.getters.ChessFun;
     
     }
+  },
+  created(){
+     Bus.$on("changePlayer",(data)=>{
+       this.isActivatClass=!this.isActivatClass;
+    })
   }
 };
 </script>
@@ -50,7 +58,7 @@ h1,h2 {
 }
 .CheckerBoard {
   margin: 0 auto;
-  border: 1px solid #000;
+  border: 2px solid red;
   width: 600px;
   height: 600px;
   background-color: bisque;

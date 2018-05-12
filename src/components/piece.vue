@@ -4,6 +4,7 @@
   </div>
 </template>
 <script>
+import Bus from './Bus.js'
 export default {
   props: {
     pieceData: {
@@ -28,6 +29,10 @@ export default {
         console.log("已经被占用，请用其他位置");
       } else {
         this.$store.commit("pieceClick",{"h":this.pieceData.h,"v":this.pieceData.v});
+        
+
+
+        Bus.$emit("changePlayer");
       }
     }
   },
