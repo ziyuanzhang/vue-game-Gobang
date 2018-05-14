@@ -5,6 +5,7 @@ import Vuex, {
 Vue.use(Vuex)
 export const store = new Vuex.Store({
   state: {
+    winner:"",
     pieceColoring:"black",
     ChessData:[
         [{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""}],
@@ -22,12 +23,14 @@ export const store = new Vuex.Store({
         [{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""}],
         [{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""}],
         [{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""}]
-        
     ]
   },
   getters:{
     ChessFun:(state)=>{
         return state.ChessData
+    },
+    WinnerFun(state){
+      return state.winner
     }
   },
   mutations: {
@@ -41,6 +44,7 @@ export const store = new Vuex.Store({
           if(state.ChessData[position.h][V].chessColor==state.pieceColoring ){
             VNum++;
             if(VNum>4){
+              state.winner = state.pieceColoring;
               console.log(state.pieceColoring,":胜出");
               break;
             }
@@ -52,6 +56,7 @@ export const store = new Vuex.Store({
         if( state.ChessData[position.h][V].chessColor==state.pieceColoring ){
           VNum++;
           if(VNum>4){
+            state.winner = state.pieceColoring;
             console.log(state.pieceColoring,":胜出");
             break;
           }
@@ -63,6 +68,7 @@ export const store = new Vuex.Store({
         if(state.ChessData[H][position.v].chessColor==state.pieceColoring ){
           HNum++;
           if(HNum>4){
+            state.winner = state.pieceColoring;
             console.log(state.pieceColoring,":胜出");
             break;
           }
@@ -74,6 +80,7 @@ export const store = new Vuex.Store({
         if(state.ChessData[H][position.v].chessColor==state.pieceColoring ){
           HNum++;
           if(HNum>4){
+            state.winner = state.pieceColoring;
             console.log(state.pieceColoring,":胜出");
             break;
           }
@@ -86,6 +93,7 @@ export const store = new Vuex.Store({
             if(state.ChessData[position.h+num][position.v-num].chessColor==state.pieceColoring){
               VHNumUpRight++; 
               if(VHNumUpRight>4){
+                state.winner = state.pieceColoring;
                 console.log(state.pieceColoring,":胜出");
                 break;
               }
@@ -101,6 +109,7 @@ export const store = new Vuex.Store({
             if(state.ChessData[position.h-num][position.v+num].chessColor==state.pieceColoring){
               VHNumUpRight++; 
               if(VHNumUpRight>4){
+                state.winner = state.pieceColoring;
                 console.log(state.pieceColoring,":胜出");
                 break;
               }
@@ -116,6 +125,7 @@ export const store = new Vuex.Store({
           if(state.ChessData[position.h+num][position.v+num].chessColor==state.pieceColoring){
             VHNumUpLeft++;
             if(VHNumUpLeft>4){
+              state.winner = state.pieceColoring;
               console.log(state.pieceColoring,":胜出");
               break;
             }
@@ -131,6 +141,7 @@ export const store = new Vuex.Store({
           if(state.ChessData[position.h-num][position.v-num].chessColor==state.pieceColoring){
             VHNumUpLeft++;
             if(VHNumUpLeft>4){
+              state.winner = state.pieceColoring;
               console.log(state.pieceColoring,":胜出");
               break;
             }

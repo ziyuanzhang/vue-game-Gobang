@@ -27,11 +27,10 @@ export default {
     mouseclick: function() {
       if (this.pieceData.pieceColor) {
         console.log("已经被占用，请用其他位置");
+      }else if(this.$store.getters.WinnerFun){
+        console.log("游戏已结束");
       } else {
         this.$store.commit("pieceClick",{"h":this.pieceData.h,"v":this.pieceData.v});
-        
-
-
         Bus.$emit("changePlayer");
       }
     }
