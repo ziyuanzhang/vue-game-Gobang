@@ -8,26 +8,26 @@ export const store = new Vuex.Store({
     winner:"",
     pieceColoring:"black",
     ChessData:[
-        [{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""}],
-        [{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""}],
-        [{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""}],
-        [{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""}],
-        [{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""}],
-        [{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""}],
-        [{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""}],
-        [{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""}],
-        [{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""}],
-        [{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""}],
-        [{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""}],
-        [{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""}],
-        [{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""}],
-        [{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""}],
-        [{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""},{"chessColor":""}]
+        [{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""}],
+        [{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""}],
+        [{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""}],
+        [{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""}],
+        [{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""}],
+        [{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""}],
+        [{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""}],
+        [{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""}],
+        [{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""}],
+        [{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""}],
+        [{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""}],
+        [{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""}],
+        [{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""}],
+        [{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""}],
+        [{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""},{"chessColor":"","key":""}]
     ]
   },
   getters:{
     ChessFun:(state)=>{
-        return state.ChessData
+      return state.ChessData
     },
     WinnerFun(state){
       return state.winner
@@ -152,19 +152,22 @@ export const store = new Vuex.Store({
           break;
         }
       }
-
-
-
-
-    if(state.pieceColoring=="black"){
-        state.pieceColoring="white"
-    }else{
-      state.pieceColoring="black"
-    }
-      
-
-
-
+      if(state.pieceColoring=="black"){
+          state.pieceColoring="white"
+      }else{
+        state.pieceColoring="black"
+      }
+    },
+    resetFun:(state)=>{
+      let date = new Date().getTime();
+      state.winner="";
+      state.pieceColoring="black";
+      state.ChessData.forEach(Chess=>{
+        Chess.forEach(data=>{
+             data.chessColor="";
+             data.key = date;
+        })
+      })
     }
   }
 })

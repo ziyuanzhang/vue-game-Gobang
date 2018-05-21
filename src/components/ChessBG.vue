@@ -28,23 +28,6 @@ export default {
       }
    }
 
-  },
-  directives: {
-    drawBGing: {
-      // 指令的定义
-      bind: function (el) {
-       let ctx = el.getContext("2d");
-        ctx.moveTo(0,20);
-        ctx.lineTo(40,20);
-        
-        ctx.moveTo(20,0);
-        ctx.lineTo(20,40);
-
-        ctx.closePath();
-        ctx.stroke();
-      }
-
-    }
   }
 };
 </script>

@@ -1,8 +1,7 @@
 <template>
   <div class="Chesscont">
     <piece class="piece" @MSenter="MSenter($event)" @MSleave="MSleave()" :pieceData="pieceData" />
-    <ChessBG class="ChessBG" :changeBG="changeBG" />
-  
+    <ChessBG class="ChessBG" :changeBG="changeBG" />  
   </div>
 </template>
 <script>
@@ -20,7 +19,7 @@
        },
        data(){
             return{
-                  changeBG:{},
+                  changeBG:{}
             }
        },
        methods:{

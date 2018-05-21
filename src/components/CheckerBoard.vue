@@ -1,18 +1,25 @@
 <template>
 <div class="container">
-  <h1><span>{{ msg }}</span> --- <span class="Winner" v-show="WinnerData">{{WinnerData}}胜出 --- 游戏结束</span></h1>
+  <h1><span>{{ msg }}</span> </h1>
+  <div class="result-start" v-if="isResultStart || WinnerData ">
+    <div class="result-start-container">
+       <div class="Winner" v-show="WinnerData">{{WinnerData}}胜出 --- 游戏结束</div>
+       <button class="start-player" @click="startPlayer">开始游戏</button>
+    </div>
+    <div class="result-start-bg"></div>
+  </div>
   <div class="CheckerBoard">
      <div class="ChesscontP" v-for="(ChessData,index) in ChessDatas"  :key="index" >
-        <Chesscont v-for="(item,indexs) in ChessData" :key="indexs" :pieceData="{'pieceColor':item.chessColor,'h':index,'v':indexs}"></Chesscont>
+        <Chesscont v-for="(item,indexs) in ChessData" :key="indexs+item.key" :pieceData="{'pieceColor':item.chessColor,'h':index,'v':indexs}"></Chesscont>
      </div>
   </div>
   <div>h--y</div>
   <div class="btn-container">
     <div class="player-con">
-      <span class="player" :class="[isActivatBlack ? 'enter' : 'leave']" @click="">黑色下棋</span>
+      <span class="player" :class="[isActivatBlack ? 'enter' : 'leave']" >黑色下棋</span>
     </div>
     <div class="player-con">
-      <span class="player" :class="[isActivatWhite ? 'enter' : 'leave']" @click="">白色下棋</span>
+      <span class="player" :class="[isActivatWhite ? 'enter' : 'leave']" >白色下棋</span>
     </div>
       
   </div>
@@ -23,6 +30,7 @@
 <script>
 import Bus from './Bus.js'
 import Chesscont from './Chesscont'
+import "../directives/directives.js"
 export default {
   name: "HelloWorld",
   components:{
@@ -31,18 +39,25 @@ export default {
   data() {
     return {
       msg: "五子棋",
-      ChesscontArr: ["aa", "bb"],
       isActivatBlack:true,
-      isActivatWhite:false
+      isActivatWhite:false,
+      isResultStart:true
     };
   },
   computed:{
     ChessDatas(){
-      console.log("this.$store:",this.$store)
       return this.$store.getters.ChessFun;
     },
     WinnerData(){
       return this.$store.getters.WinnerFun;
+    }
+  },
+  methods:{
+    startPlayer:function(){
+       this.isActivatBlack=true;
+       this.isActivatWhite=false;
+       this.isResultStart = false;
+       this.$store.commit("resetFun");
     }
   },
   created(){
@@ -64,13 +79,56 @@ export default {
 };
 </script>
 <style scoped>
+.container{position: relative;}
+
 h1,h2 {
   font-weight: normal;
   text-align: center;
 }
-.Winner{
-  color: red;
-}
+
+.result-start{
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  margin-top:-375px;
+  margin-left: -350px;
+  width: 700px;
+  height: 750px;
+  text-align: center;
+  }
+  .start-player{
+    font-size: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .result-start-container{
+     display: inline-block;
+     text-align: center;
+     margin-left: auto;
+     margin-right: auto;
+    
+     margin-top: 250px;
+     padding: 30px 70px;
+     background-color: #fff;
+  }
+  .result-start-bg{
+    position: absolute;
+    top: 0px;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.4;
+  }
+  .Winner{
+    background-color:#fff;
+    font-size: 50px;
+    color: red;
+    margin-bottom: 50px;
+  }
 .CheckerBoard {
   margin: 0 auto;
   border: 2px solid red;
