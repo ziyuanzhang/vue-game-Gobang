@@ -1,4 +1,4 @@
-import Vue from 'vue'
+import Vue from 'vue';
 Vue.directive('drawARCing', {
   // 指令的定义
   //  bind: function(el, binding) {
@@ -13,7 +13,7 @@ Vue.directive('drawARCing', {
   // },
   update: function (el, binding) {
     if (binding.value.color) {
-      let ctx = el.getContext("2d");
+      let ctx = el.getContext('2d');
       ctx.fillStyle = binding.value.color;
       ctx.beginPath();
       ctx.arc(20, 20, 10, 0, 2 * Math.PI);
@@ -25,7 +25,7 @@ Vue.directive('drawARCing', {
 Vue.directive('drawBGing', {
   // 指令的定义
   bind: function (el) {
-    let ctx = el.getContext("2d");
+    let ctx = el.getContext('2d');
     ctx.moveTo(0, 20);
     ctx.lineTo(40, 20);
 
