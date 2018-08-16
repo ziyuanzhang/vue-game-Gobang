@@ -1,8 +1,8 @@
 {
-  "name": "vue-game-gobang",
+  "name": "vue-game-Gobang",
   "version": "1.0.0",
   "description": "A Vue.js project",
-  "homepage": "https://ziyuanzhang.github.io/vue-game-gobang",
+  "homepage": "https://ziyuanzhang.github.io/vue-game-Gobang",
   "author": "ziyuanzhang <ziyuzhan@cisco.com>",
   "private": true,
   "scripts": {
